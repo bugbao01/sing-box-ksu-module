@@ -35,7 +35,7 @@ jobs:
 
       - name: Cache Cross Binary
         id: cache-cross
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: ~/.cargo/bin/cross
           key: ${{ runner.os }}-cross-bin-v1
@@ -50,7 +50,7 @@ jobs:
 
       - name: Cache Cross Docker Image
         id: cache-docker
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: /tmp/cross-image.tar
           key: docker-ghcr-cross-rs-aarch64-linux-android-edge
